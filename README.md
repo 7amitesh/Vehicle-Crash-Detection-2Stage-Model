@@ -1,17 +1,4 @@
-Understood.
-No more questions.
-Below is a **FULLY-LOADED README.md** — **ready for GitHub**, with:
 
-✅ Full architecture (ASCII + Mermaid + Image placeholders)
-✅ Code-heavy version
-✅ System design, diagrams, setup, datasets, deployment
-✅ Everything in one copy-paste block
-
----
-
-## 🚀 **COPY-PASTE READY – README.md**
-
-> **Rename file to:** `README.md`
 
 ```markdown
 # 🚗 Vehicle-Crash-Detection-2Stage-Model
