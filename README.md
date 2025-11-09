@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # 🚗 Vehicle-Crash-Detection-2Stage-Model
 
 A **Hybrid Two-Stage Vehicle Accident Detection & Validation System** using **IoT Sensors + Deep Learning**.  
