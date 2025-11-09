@@ -55,3 +55,48 @@ This prevents false alerts caused by bumps, hard brakes, potholes, or device dro
                             |
                             └────► NO ─────► Log False Positive
 
+
+---
+
+### 📌 **Mermaid Architecture Diagram**
+
+```mermaid
+flowchart LR
+    IVM[Raspberry Pi IoT Module<br>MPU6050 + GPS + Camera] -->|Trigger + Upload| CVS[Cloud Validation Server]
+    CVS --> DL[ResNet-50 Accident Classifier]
+    DL -->|Accident| ALERT[Send SMS/Email to Emergency Services]
+    DL -->|No Accident| LOG[Store False Positive Log]
+📍 Placeholder: Insert system_architecture.png diagram in /docs folder
+Vehicle-Crash-Detection-2Stage-Model/
+│
+├── edge-device/                       # Stage-1: IoT Code for Raspberry Pi
+│   ├── sensors/
+│   │   ├── accelerometer.py
+│   │   ├── gps_module.py
+│   │   └── camera_buffer.py
+│   ├── main.py
+│   ├── config.py
+│   └── requirements.txt
+│
+├── server/                            # Stage-2: Cloud + DL Validation
+│   ├── app.py
+│   ├── model/
+│   │   ├── resnet50_model.h5
+│   │   └── preprocess.py
+│   ├── utils/
+│   │   ├── video_to_frames.py
+│   │   ├── predictor.py
+│   │   └── alert_service.py
+│   └── requirements.txt
+│
+├── model-training/
+│   ├── Accident_Training.ipynb
+│   ├── datasets.txt
+│   └── README.md
+│
+├── docs/
+│   ├── architecture.png
+│   ├── system_flowchart.png
+│   └── presentation.pptx
+│
+└── README.md
